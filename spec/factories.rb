@@ -1,4 +1,8 @@
 FactoryBot.define do
+  factory :user do
+    
+  end
+
   factory :blog do
     title { "MyString" }
     content { "MyText" }

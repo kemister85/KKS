@@ -7,6 +7,10 @@ Rails.application.routes.draw do
 
   #Application Pages
   get 'home/index'
+  get 'home/contact'
+  get 'home/about'
+
+  get 'blogs/index'
 
   #Devise
   get 'users/sign_in'

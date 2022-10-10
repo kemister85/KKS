@@ -1,16 +1,55 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Blogs</h1>
+<div class="container mt-5 d-flex flex-wrap justify-content-around d-grid gap-3">
+  <div class="container my-3 d-grid gap-3 d-flex flex-wrap flex-direction-row justify-content-center align-items-stretch aligh-content-start">
 
-<div id="blogs">
-  <% @blogs.each do |blog| %>
-    <%= render blog %>
-    <p>
-      <%= link_to "Show this blog", blog %>
-    </p>
-  <% end %>
+    <% @blogs.each do |blog| %>
+        <div class="card flex-fill mx-3 my-3" style="width: 18rem;">
+          
+          <% if blog.title.include? "RAILS" %>
+              <%= image_tag("Rails.svg.png") %>
+          <% end %>
+
+          <% if blog.title.include? "JS" %>
+            <%= image_tag("JavaScript.svg.png") %>
+          <% end %>
+
+          <% if blog.title.include? "HTML5" %>
+            <%= image_tag("HTML5.svg.png") %>
+          <% end %>
+
+          <% if blog.title.include? "CSS3" %>
+            <%= image_tag("CSS3.svg.png") %>
+          <% end %>
+
+          <% if blog.title.include? "GIT" %>
+            <%= image_tag("GIT.svg.png") %>
+          <% end %>
+
+          <% if blog.title.include? "ASCIIDOCS" %>
+            <%= image_tag("ASCIIDOCS.svg.png") %>
+          <% end %>
+
+          <% if blog.title.include? "RUBY" %>
+            <%= image_tag("RUBY.svg.png") %>
+          <% end %>
+
+          <% if blog.title.include? "XML" %>
+            <%= image_tag("XML.svg.png") %>
+          <% end %>
+
+
+          <div class="card-body">
+            <div class="d-flex flex-wrap">
+                <h5 class="card-title"><%= blog.title %></h5>
+            </div>
+            <br>
+            <button class="btn btn-primary btn-sm"><%= link_to "Show this blog", blog %></button>
+          </div>
+        </div>
+    <%end%>
 </div>
 
 <% if user_signed_in? %>
-<%= link_to "New blog", new_blog_path %>
+  <%= link_to "New blog", new_blog_path %>
 <% end %>

@@ -1,11 +1,12 @@
 <p style="color: green"><%= notice %></p>
 
-<div class="container mt-5 d-flex flex-wrap justify-content-around d-grid gap-3">
+<div class="container mb-5 d-flex flex-wrap justify-content-around d-grid gap-3 bg-dark text-white">
+
   <div class="container my-3 d-grid gap-3 d-flex flex-wrap flex-direction-row justify-content-center align-items-stretch aligh-content-start">
 
     <% @blogs.each do |blog| %>
 
-      <div class="card mx-3 my-3" style="width: 14rem; height: 20rem;">
+      <div class="card mx-3 my-3 text-dark" style="width: 14rem; height: 20rem;">
 
         <div class="card justify-content-center mx-3 my-3 border border-3" style="width: 12rem;">
           
@@ -49,17 +50,13 @@
         
         <div class="d-flex flex-row-reverse">
           <div class="p-2">
-            <button type="button" class="btn btn-primary bg-light btn-sm"><%= link_to "Show", blog %></button>
+            <div class"button_blog"><%= link_to "Show", blog %></div>
           </div>
         </div>
-
+        
       </div>
 
     <%end%>
   </div>
-
-  <% if user_signed_in? %>
-    <%= link_to "New blog", new_blog_path %>
-  <% end %>
 
 </div>

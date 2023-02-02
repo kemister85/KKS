@@ -11,7 +11,8 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body class="d-flex flex-column min-vh-100 bg-dark text-white">
+  
+  <body>
 
     <%= render 'home/header' %>
 
@@ -24,10 +25,11 @@
 
     <%= yield %>
     
-    <footer class="d-flex flex-column mb-3 mt-auto"
+    <div class="footer fixed-bottom d-flex flex-column mb-3 mt-auto">
       <%= render 'home/footer' %>
     </footer>
     
   </body>
+
 
 </html>

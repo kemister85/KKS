@@ -5,8 +5,8 @@
   <div class="container my-3 d-grid gap-3 d-flex flex-wrap flex-direction-row justify-content-center align-items-stretch aligh-content-start">
 
     <% @blogs.each do |blog| %>
-
-      <div class="card mx-3 my-3 text-dark" style="width: 14rem; height: 20rem;">
+      
+      <div class="card mx-3 my-3 text-dark bg-light bg-gradient" style="width: 14rem; height: 20rem;">
 
         <div class="card justify-content-center mx-3 my-3 border border-3" style="width: 12rem;">
           
@@ -50,7 +50,7 @@
         
         <div class="d-flex flex-row-reverse">
           <div class="p-2">
-            <div class"button_blog"><%= link_to "Show", blog %></div>
+            <div class"button_blog"><%= link_to "Read more..", blog %></div>
           </div>
         </div>
         
